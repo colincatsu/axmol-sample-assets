@@ -1,0 +1,34 @@
+material CharacterToonSkinned
+{
+    technique character_toon_skinned
+    {
+        pass 0
+        {
+            shader
+            {
+                vertexShader = custom/character_toon_skin_vs
+                fragmentShader = custom/character_toon_fs
+
+                u_lightDir = 0.32,-0.84,-0.42
+                u_shadowThreshold = 0.28
+                u_shadowTint = 0.5,0.34,0.22
+                u_highlightThreshold = 0.72
+                u_midTint = 0.9,0.82,0.68
+                u_bandSoftness = 0.08
+                u_highlightTint = 1.08,0.96,0.82
+                u_rimThreshold = 0.58
+                u_rimColor = 0.92,0.84,0.68
+                u_rimStrength = 0.08
+                u_specularColor = 1.0,0.92,0.78
+                u_specularPower = 18.0
+                u_ambientTint = 0.92,0.9,0.86
+                u_specularStrength = 0.12
+
+                sampler u_sampler0
+                {
+                    path = MeshRendererTest/monguger.tga
+                }
+            }
+        }
+    }
+}

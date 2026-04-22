@@ -1,0 +1,26 @@
+material LowPolyToon
+{
+    technique lowpoly_toon
+    {
+        pass 0
+        {
+            shader
+            {
+                vertexShader = custom/lowpoly_toon_vs
+                fragmentShader = custom/lowpoly_toon_fs
+
+                u_lightDir = 0.45,-0.8,-0.55
+                u_bandCount = 4.0
+                u_shadowTint = 0.62,0.72,0.9
+                u_rimThreshold = 0.55
+                u_highlightTint = 0.95,0.9,0.7
+                u_rimStrength = 0.18
+
+                sampler u_sampler0
+                {
+                    path = MeshRendererTest/boss.png
+                }
+            }
+        }
+    }
+}

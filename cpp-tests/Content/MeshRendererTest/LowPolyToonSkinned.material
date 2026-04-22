@@ -1,0 +1,26 @@
+material LowPolyToonSkinned
+{
+    technique lowpoly_toon_skinned
+    {
+        pass 0
+        {
+            shader
+            {
+                vertexShader = custom/lowpoly_toon_skin_vs
+                fragmentShader = custom/lowpoly_toon_fs
+
+                u_lightDir = 0.34,-0.86,-0.38
+                u_bandCount = 3.0
+                u_shadowTint = 0.58,0.4,0.24
+                u_rimThreshold = 0.54
+                u_highlightTint = 1.0,0.84,0.58
+                u_rimStrength = 0.16
+
+                sampler u_sampler0
+                {
+                    path = MeshRendererTest/monguger.tga
+                }
+            }
+        }
+    }
+}
